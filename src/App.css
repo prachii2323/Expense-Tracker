@@ -1,38 +1,162 @@
-.App {
+body {
+  background: #E0EAFC;  
+   background-position: center; 
+   background-repeat: no-repeat; 
+   background-size: cover;
+}
+.app-heading {
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 30px;
+  color: #282c6d;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+/* Styles for transaction box */
+.transaction-box {
+  margin-right: 50px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+  background-color: #fff; /* White background color for box */
+}
+
+/* Styles for transaction box elements */
+.transaction-box label,
+.transaction-box input,
+.transaction-box button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.transaction-box input[type="text"],
+.transaction-box input[type="number"],
+.transaction-box select {
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.transaction-box select {
+  width: calc(100% - 16px);
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.transaction-box .type-labels {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.transaction-box .type-labels label {
+  margin-right: 10px;
+  color: #333;
+}
+
+.transaction-box input[type="radio"] {
+  margin-right: 5px;
+  color: rgb(88, 88, 150);
+}
+
+.transaction-box input[type="radio"]:checked + label {
+  color: rgb(88, 88, 150);
+}
+
+/* Styles for transaction history */
+.transaction-history {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 600px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff; /* White background color for history */
+}
+
+.transaction-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-history th,
+.transaction-history td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  position: relative;
+}
+
+
+.transaction-history th:nth-child(3),
+.transaction-history td:nth-child(3) {
+  width: 290%; /* Increased width for the Expense column */
+}
+
+.transaction-history .expense-cell {
+  width: 50%; /* Adjust width for expense cell */
+  position: relative;
+}
+
+.transaction-history .expense-cell > div {
+  margin-bottom: 8px; /* Add margin after each expense entry */
+}
+
+.transaction-history .edit-button,
+.transaction-history .delete-button {
   color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  margin-left: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.transaction-history .edit-button {
+  background-color: #4caf50; /* Green */
+  color: white;
+  left: calc(100% + 10px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.transaction-history .delete-button {
+  background-color: #f44336; /* Red */
+  color: white;
+  right: calc(100% + 10px);
+}
+
+.transaction-history th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.transaction-history tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.total-savings-box {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 5rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff; /* White background color for savings box */
 }
